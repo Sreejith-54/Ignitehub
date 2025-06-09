@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="search.css">
+    <script src="search.js" defer></script>
+</head>
+<body>
+    <header>
+        <a class="division" href="welcome.html">IGNITE HUB</a>
+        <div>
+            <a>Home</a>
+            <a href="about.html">About</a>
+            <a>Help</a>
+        </div>
+    </header>
+    <div id="content">
+    <form onsubmit="event.preventDefault()">
+        <div id="motion">
+            <div class="arrow left"></div>
+            <div id="category">
+                <button class="option" type="button" id="video" onclick="apiChange('video')">Videos</button>
+                <button class="option" type="button" id="book" onclick="apiChange('books')">Books</button>
+                <button class="option" type="button" id="recipe" onclick="apiChange('recipe')">Recipes</button>
+                <button class="option" type="button" id="image" onclick="apiChange('images')">Images</button>
+            </div>
+            <div class="arrow right"></div>
+        </div>
+        <div id="choices">
+            <div id="main">
+                <input placeholder="Search"  id="search" required>
+            </div>
+            <div class="div" id="submission">
+                <button type="submit" onclick="handleSearch()">Filter</button>
+                <button type="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+
+        <div>
+            <h2>
+                Search Results
+            </h2>
+            <div id="result"></div>
+        </div>
+    </div>
+</body>
+</html>

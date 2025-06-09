@@ -1,0 +1,208 @@
+body{
+    background: linear-gradient(-39deg, rgb(12, 0, 36), rgb(54, 1, 110), rgb(12, 0, 36), rgb(12, 0, 36));
+    background-attachment: fixed;
+    color: white;
+    font-family: Helvetica;
+}
+#content{
+    margin:50px 20px 50px 20px;
+}
+#content>div{
+    width: 100%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 50px 0px 50px;
+}
+header div{
+    display: flex;
+    column-gap: 30px;
+}
+button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+button:hover{
+    background-color: grey;
+}
+button:active{
+    background-color: rgba(12, 0, 36, 0.397);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+#choices{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 40px 30px;
+    row-gap: 20px;
+    border-radius: 20px;
+}
+#choices>.div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    row-gap: 20px;
+
+}
+#category{
+    position: relative;
+    bottom: 10px;
+    height: 35px;
+    display: flex;
+    margin: 0px 20px 0px 20px;
+    column-gap: 10px;
+    overflow-x: scroll;
+}
+#category::-webkit-scrollbar{
+    color: transparent;
+    outline: none;
+}
+#search{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+#browse{
+    background-color: rgba(228, 66, 57, 0.5);
+    border-radius: 5px;
+    color: white;
+    padding: 0px 5px;
+    width: max-content;
+    width: 20%;
+    height: 30px;
+    border: 1px solid white;
+}
+#main{
+    display: flex;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 98%;
+}
+#submission{
+    display: flex;
+    column-gap: 50px;
+}
+#submission button{
+    background-color: transparent;
+    border:2px solid transparent;
+    animation : borderani 2s infinite;
+    color: white;
+}
+
+#submission button:first-child{
+    border:none;
+    animation:none;
+    color: rgb(47, 1, 67);
+    background-image:linear-gradient(-45deg,cyan,#ff69b4);
+    outline: 1px solid white;
+}
+#motion{
+    height: 35px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.arrow{
+    width:0;
+    height:0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.left{
+    border-right:10px solid white;
+}
+.left:hover{
+    border-right: 10px solid grey;
+}
+.right{
+    border-left: 10px solid white;
+}
+.right:hover{
+    border-left: 10px solid grey;
+}
+.division{
+    color:  rgb(139, 91, 192);
+    font-size: x-large;
+    font-weight: 1000;
+}
+a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.selection{
+    height: 25px;
+    border-radius: 5px;
+}
+.option{
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding: 3px 10px;
+    margin: 6px;
+    border:4px solid transparent;
+}
+#result{
+    display: flex;
+    flex-wrap: wrap;
+    gap:40px
+}
+#result>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    width: 350px;
+    height: 250px;
+}
+img{
+    border-radius: 20px;
+}
+.details{
+    display: none;
+    padding:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position:relative;
+    bottom:10px;
+    margin-top: -150px;
+    background-color: rgba(0, 0, 0, 0.553);
+    color:rgb(255, 255, 255);
+    border-radius:20px;
+}
+.details p:first-child{
+    height: 50px;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+h2{
+    margin: 50px;
+}
+
+#result>div>a {
+    width:350px;
+    height: 250px;
+    border: 2px solid transparent;
+}
+
+@keyframes borderani{
+    0%{border-image: linear-gradient(0deg,cyan,#ff69b4) 1;}
+    25%{border-image: linear-gradient(90deg,cyan,#ff69b4) 1}
+    50%{border-image: linear-gradient(180deg,cyan, #ff69b4) 1}
+    75%{border-image: linear-gradient(270deg,cyan, #ff69b4) 1}
+    100%{border-image: linear-gradient(360deg, cyan,#ff69b4) 1}
+}
+
+
+

@@ -1,0 +1,100 @@
+body{
+    background: linear-gradient(-39deg, rgb(12, 0, 36), rgb(61, 2, 123), rgb(12, 0, 36), rgb(12, 0, 36));
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 80px;
+    font-family: inter;
+}
+button:hover{
+    background-color: grey;
+}
+button:active{
+    background-color: rgba(12, 0, 36, 0.397);
+}
+body>div{
+    padding-bottom: 70px;
+}
+#icon-container{
+    border-radius: 200px;
+    overflow: hidden;
+    position: relative;
+    top: -60px;
+}
+input{
+    background:none;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+}
+.password{
+    color: rgb(168, 168, 255);
+    letter-spacing: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input:focus{
+    color: white;
+    outline: none;
+}
+::-ms-reveal{
+    filter: invert(100%);
+    font-size: large;
+}
+label{
+    font-style: italic;
+    font-weight: 100;
+}
+a{
+    color: white;
+    font-weight: 100;
+    font-size: small;
+}
+#login-content{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    row-gap: 20px;
+}
+#container{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+}
+.submission>button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.submission{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.other-opt{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+.other-opt button{
+    border-radius: 0px 20px 20px 20px;
+    width: 300px;
+}
+.other-opt button>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 15px;
+    align-items: center;
+    column-gap: 45px;
+    font-size: larger;
+}

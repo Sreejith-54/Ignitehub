@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body onmouseleave="hide()" onclick="hide()">
+    <header>
+      <a class="logo" href="welcome.html">IGNITE HUB</a>
+        <div>
+            <a>Home</a>
+            <a href="./about.html">About</a>
+            <a>Help</a>
+        </div>
+    </header>
+  <div class="container" >
+    <h1>About Us</h1>
+    <div>
+    <div class="member-grid">
+      <div class="member-card" id="Anirudh" onmouseenter="Anirudh()">
+        <div class="member-image">
+          <img src="./assets/pic anirudh.jpg" alt="Anirudh Suresh" class="card-img" height="150" width="150">
+        </div>
+        <h3>Anirudh Suresh</h3>
+      </div>
+      <div class="member-card" id="Sreejith" onmouseenter="Sreejith()">
+        <div class="member-image">
+          <img src="./assets/pic sreejith.jpg" alt="Sreejith M" class="card-img" height="150" width="150">
+        </div>
+        <h3>Sreejith M</h3>
+      </div>
+      <div class="member-card" id="Amitesh" onmouseenter="Amitesh()">
+        <div class="member-image">
+          <img src="./assets/pic amitesh.jpg" alt="Amitesh Singh" class="card-img" height="150" width="150">
+        </div>
+        <h3>Amitesh Singh</h3>
+      </div>
+      <div class="member-card" id="Harisankar" onmouseenter="Harisankar()">
+        <div class="member-image">
+          <img src="./assets/pic hari.jpg" alt="Harishankar" class="card-img" height="150" width="150">
+        </div>
+        <h3>Harisankar</h3>
+      </div>
+    </div>
+    <div id="extra" onmouseleave="hide()"></div>
+  </div>
+</body>
+<script>
+  function hidem(){
+    const member1 = document.getElementById("Anirudh");
+    member1.style.marginBottom='30px';
+    member1.style.boxShadow ="none";
+    const member2 = document.getElementById("Sreejith");
+    member2.style.marginBottom='30px';
+    member2.style.boxShadow ="none";
+    const member3 = document.getElementById("Amitesh")
+    member3.style.marginBottom='30px';
+    member3.style.boxShadow ="none";
+    const member4 = document.getElementById("Harisankar")
+    member4.style.marginBottom='30px';
+    member4.style.boxShadow ="none";
+  }
+  function hide(){
+    hidem();
+    const elements = document.querySelectorAll('.card-img');
+    elements.forEach(element => {
+      element.style.display = 'block';
+    });
+    const popup = document.getElementById('extra');
+    popup.style.display='none';
+  }
+
+  function Anirudh(){
+    hidem();
+    const elements = document.querySelectorAll('.card-img');
+    elements.forEach(element => {
+      element.style.display = 'none';
+    });
+    const member = document.getElementById("Anirudh");
+    member.style.marginBottom='0px';
+    member.style.boxShadow = ' cyan   0px -5px 5px';
+    const popup = document.getElementById('extra');
+    popup.style.display='block';
+    popup.innerHTML="";
+    popup.className = 'floating-popup';
+    popup.innerHTML = `
+    <div class="popup">
+      <img src="./assets/pic anirudh.jpg" alt="Anirudh Suresh" height="300" width="260">
+      <div>
+        <p>Student at Amrita Vishwa Vidyapeetham, Amritapuri Campus</p>
+        <p>Specialized in Web Development and Data Science</p>
+        <p>Contact: 8921935468</p>
+      </div>
+    </div>
+    `;
+
+    document.body.appendChild(popup);
+  };
+
+
+
+  function Sreejith() {
+    hidem();
+    const elements = document.querySelectorAll('.card-img');
+    elements.forEach(element => {
+      element.style.display = 'none';
+    });
+    const member = document.getElementById("Sreejith");
+    member.style.marginBottom='0px';
+    member.style.boxShadow = ' cyan   0px -5px 5px';
+    const popup = document.getElementById('extra');
+    popup.style.display='block';
+    popup.innerHTML="";
+    popup.className = 'floating-popup';
+    popup.innerHTML = `
+    <div class="popup">
+      <img src="./assets/pic sreejith.jpg" alt="Sreejith Manoj" height="300" width="260">
+      <div>
+        <p>Student at Amrita Vishwa Vidyapeetham, Amritapuri Campus</p>
+        <p>Specialized in Web Development and Data Science</p>
+        <p>Contact: 8921935468</p>
+      </div>
+    </div>
+    `;
+
+    document.body.appendChild(popup);
+  };
+
+
+
+
+
+  function Amitesh() {
+    hidem();
+      const elements = document.querySelectorAll('.card-img');
+    elements.forEach(element => {
+      element.style.display = 'none';
+    });
+    const member = document.getElementById("Amitesh");
+    member.style.marginBottom='0px';
+    member.style.boxShadow = ' cyan   0px -5px 5px';
+    const popup = document.getElementById('extra');
+    popup.style.display='block';
+    popup.innerHTML="";
+    popup.className = 'floating-popup';
+    popup.innerHTML = `
+    <div class="popup">
+      <img src="./assets/pic amitesh.jpg" alt="Amitesh Singh" height="300" width="260">
+      <div>
+        <p>Student at Amrita Vishwa Vidyapeetham, Amritapuri Campus</p>
+        <p>Specialized in Web Development and Data Science</p>
+        <p>Contact: 8921935468</p>
+      </div>
+    </div>
+    `;
+
+    document.body.appendChild(popup);
+  };
+
+
+
+
+
+function Harisankar(){
+  hidem();
+    const elements = document.querySelectorAll('.card-img');
+    elements.forEach(element => {
+      element.style.display = 'none';
+    });
+  const member = document.getElementById("Harisankar");
+  member.style.marginBottom='0px';
+  member.style.boxShadow = ' cyan   0px -5px 5px';
+  const popup = document.getElementById('extra');
+  popup.style.display='block';
+  popup.innerHTML="";
+  popup.className = 'floating-popup';
+  popup.innerHTML = `
+  <div class="popup">
+    <img src="./assets/pic hari.jpg" alt="Harishankar" height="300" width="260">
+    <div>
+      <p>Student at Amrita Vishwa Vidyapeetham, Amritapuri Campus</p>
+      <p>Specialized in Web Development and Data Science</p>
+      <p>Contact: 8921935468</p>
+    </div>
+  </div>
+  `;
+
+    document.body.appendChild(popup);
+  };
+
+
+</script>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./welcome.css">
+    <script src="search.js"></script>
+    <title>Welcome Page</title>
+</head>
+<body>
+    <header>
+        <a class="division" href="welcome.html">IGNITE HUB</a>
+        <div>
+            <a>Home</a>
+            <a href="./about.html">About</a>
+            <a>Help</a>
+            <div id="menu" onmouseenter="show()" onmouseleave="hide()">
+                <div id="icon">&#10070;</div>
+                <div id="options">
+                    <div id="optionitem">
+                        <a href="settings.html">Settings</a>
+                        <a>Add content</a>
+                        <a>content ranking</a>
+                        <a>readlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </header>
+    <div id="content">
+        <img src="assets\book-Photoroom.png" height="500px">
+        <p id="Intro">The Spark of Smart Entertainment</p><br><br>
+        <form id="search-content" onsubmit="event.preventDefault()">
+            <input placeholder="  Search" id="wesearch" >
+            <button id="searchbtn" onclick="nav()">Search</button>
+        </form>
+        <p>or</p>
+        <button>EXPLORE</button>
+    </div>
+    <div>
+        <h2>About</h2>
+        <div class="define">
+            <p><em><b>Welcome to IgniteHub — your one-stop digital space to explore, create, and grow.</b></em><br><br>
+                At IgniteHub, we believe learning isn't limited to textbooks — it happens through cooking, reading, sharing, and discovering together.
+                That’s why we’ve created a dynamic platform that brings together recipes, books, videos and creative content, all in one place.</p>
+            <h3>What We’re About:</h3>
+            <p>IgniteHub is built for curious minds and creative souls. Whether you're trying a new recipe, diving into a captivating book, or
+                 sharing something you love — this is where it all happens.</p>
+            <p>We’re here to ignite curiosity, fuel creativity, and build a vibrant digital hub where everyone can contribute, explore, and enjoy.
+                At IgniteHub, every click is a spark.</p>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p class="division">IGNITE HUB</p>
+            <p>&copy; IGNITE HUB 2025<br>
+            Reserved Copyright</p>
+        </div>
+        <div>
+            <p class="division">Home</p>
+            <a href="search.html">Search</a>
+        </div>
+        <div>
+            <a class="division" href="about.html">About</a><br><br>
+            <a href="./about.html">About Us</a>
+        </div>
+        <div>
+            <p class="division">Settings</p>
+            <p>Profile</p>
+            <p>Mode</p>
+        </div>
+    </footer>
+</body>
+</html>

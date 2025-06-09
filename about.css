@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(-39deg, rgb(12, 0, 36), rgb(61, 2, 123), rgb(12, 0, 36), rgb(12, 0, 36));
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.container {
+  padding: 20px 20px 0px 20px;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color:  rgb(139, 91, 192);
+    font-size: x-large;
+    font-weight: 1000;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 50px 0px 50px;
+}
+header div{
+    display: flex;
+    column-gap: 30px;
+}
+.logo-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.logo-text span {
+  display: block;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  text-decoration: none;
+  color: white;
+
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 40px 0;
+  color: #00b7eb;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 70px;
+  animation: glow 5s infinite ease-in;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 10px;
+  padding: 80px 0px 0px 0px;
+}
+
+.member-card {
+  margin:30px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  animation:momo 1s infinite ease-out alternate;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+@keyframes momo {
+  0%{
+    box-shadow: 0px 0px 10px  1px cyan;
+  }
+  100%{
+    box-shadow:  0px -4px 2px 0px cyan;
+  }
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: cyan   0px -5px 5px;
+}
+
+.member-image {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background: #ccc;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.member-card h3 {
+  font-size: 22px;
+  margin: 15px 0 10px;
+}
+
+.member-card p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.sidebar {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .logo-section {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .member-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .sidebar {
+    right: 10px;
+    padding: 8px;
+  }
+
+  .sidebar a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .member-card h3 {
+    font-size: 18px;
+  }
+
+  .member-card p {
+    font-size: 14px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .logo-text {
+    font-size: 12px;
+  }
+
+  .social-icons a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.iimg{
+    width: 100px;
+    height: 100px;
+    color: black;
+}
+.floating-popup {
+  margin: 0px 5% 100px 5%;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.311),  rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  color: aliceblue;
+  padding: 20px;
+  width: 85%;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.floating-popup h2 {
+  margin-top: 0;
+}
+img{
+  border-radius: 20px;
+  margin: 10px;
+}
+.popup{
+  display: flex;
+  flex-direction: row;
+  gap:50px
+}
+#extra{
+  box-shadow:cyan 0px 5px 5px;
+}
+@keyframes glow {
+  from{
+    text-shadow: #00b7eb;
+
+  }
+  to{
+     text-shadow: beige;
+  }
+  
+}
