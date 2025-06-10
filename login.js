@@ -35,7 +35,7 @@ async function register() {
     try {
       const userCredential = await auth.createUserWithEmailAndPassword(email, password);
       console.log('Register success:', userCredential.user);
-      window.location.href = "login.html";
+      window.location.href = "Index.html";
     } catch (error) {
       console.log(error.message);
     }
