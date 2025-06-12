@@ -8,8 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
     <script src="login.js" defer></script>
 </head>
 <body>
@@ -18,15 +19,17 @@
             <img src="assets/icon-1024x1024 (1).png" height="120" width="120">
         </div>
         <h1>Register Page</h1><br>
-        <form id="login-content" onsubmit="event.preventDefault()">
+        <form id="login-content" onsubmit="event.preventDefault(); register();">
+            <label for="username">Username</label>
+            <input name="username" id="username" type="text" required><br>
             <label for="email">Email</label>
-            <input name="email" id="remail" type="email" ><br>
+            <input name="email" id="remail" type="email" required><br>
             <label for="Password">Password</label>
-            <input name="Password" class="password" id="rpassword" type="password"><br>
+            <input name="Password" class="password" id="rpassword" type="password" required><br>
             <label for="Password">Confirm Password</label>
-            <input name="Password" class="password" id="cpassword" type="password">
+            <input name="Password" class="password" id="cpassword" type="password" required>
             <div class="submission">
-                <button type="submit" onclick="register()">REGISTER</button>
+                <button type="submit">REGISTER</button>
             </div>
         </form>
     </div>

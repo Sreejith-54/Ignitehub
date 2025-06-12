@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./welcome.css">
     <script src="search.js"></script>
+    <script src="login.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
     <title>Welcome Page</title>
 </head>
 <body>
     <header>
         <a class="division" href="welcome.html">IGNITE HUB</a>
         <div>
-            <a>Home</a>
             <a href="./about.html">About</a>
-            <a>Help</a>
+            <a href="./help.html">Help</a>
             <div id="menu" onmouseenter="show()" onmouseleave="hide()">
                 <div id="icon">&#10070;</div>
                 <div id="options">
                     <div id="optionitem">
                         <a href="settings.html">Settings</a>
-                        <a>Add content</a>
-                        <a>content ranking</a>
-                        <a>readlist</a>
+                        <a class="disable">Add content</a>
+                        <a class="disable">content ranking</a>
+                        <a class="disable">readlist</a>
                     </div>
                 </div>
             </div>
@@ -29,7 +33,7 @@
        
     </header>
     <div id="content">
-        <img src="assets\book-Photoroom.png" height="500px">
+        <img src="assets/book-Photoroom.png" height="500px">
         <p id="Intro">The Spark of Smart Entertainment</p><br><br>
         <form id="search-content" onsubmit="event.preventDefault()">
             <input placeholder="  Search" id="wesearch" >

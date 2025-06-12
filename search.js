@@ -273,3 +273,12 @@ function hide(){
     icon.style.animation='none';
     menu.style.display='none';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Only set these if the elements exist
+    const usernameElem = document.getElementById('usernamedata');
+    const emailElem = document.getElementById('emaildata');
+    if (usernameElem) usernameElem.textContent = localStorage.getItem('username') || '';
+    if (emailElem) emailElem.textContent = localStorage.getItem('email') || '';
+});
+

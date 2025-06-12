@@ -52,6 +52,12 @@ header div{
     background-image: linear-gradient(75deg,#ff69b4,cyan);
     z-index: 5;
 }
+#optionitem>a.disable{
+  color:white;
+}
+#optionitem>a.disable:hover{
+  color:white;
+}
 footer{
     position: relative;
     display: flex;

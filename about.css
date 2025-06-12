@@ -42,6 +42,55 @@ header div{
     display: flex;
     column-gap: 30px;
 }
+#menu{
+    position: relative;
+    top:10px;
+    right:-35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#icon{
+    font-size: xx-large;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+#options{
+    display: none;
+}
+#optionitem>a{
+    color:black;
+    font-weight: 600;
+}
+#optionitem>a:hover{
+    color:rgb(142, 36, 255);
+}
+#optionitem{
+    padding:20px;
+    position: absolute;
+    border-radius: 10px;
+    top:35px;
+    right:10px;
+    width:150px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-weight: 500;
+    background-image: linear-gradient(75deg,#ff69b4,cyan);
+    z-index: 5;
+}
+#optionitem>a.disable{
+  color:white;
+}
+#optionitem>a.disable:hover{
+  color:white;
+}
+.division{
+    color:  rgb(139, 91, 192);
+    font-size: x-large;
+    font-weight: 1000;
+} 
 .logo-text {
   font-size: 14px;
   line-height: 1.4;
@@ -260,6 +309,7 @@ img{
 #extra{
   box-shadow:cyan 0px 5px 5px;
 }
+
 @keyframes glow {
   from{
     text-shadow: #00b7eb;
@@ -269,4 +319,8 @@ img{
      text-shadow: beige;
   }
   
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }

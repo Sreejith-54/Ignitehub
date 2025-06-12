@@ -1,0 +1,275 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(-39deg, rgb(12, 0, 36), rgb(54, 1, 110), rgb(12, 0, 36), rgb(12, 0, 36));
+  color: white;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding: 20px 20px 0px 20px;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+.logo {
+  color:  rgb(139, 91, 192);
+    font-size: x-large;
+    font-weight: 1000;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 50px 0px 50px;
+}
+header div{
+    display: flex;
+    column-gap: 30px;
+}
+#menu{
+    position: relative;
+    top:10px;
+    right:-35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#icon{
+    font-size: xx-large;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+#options{
+    display: none;
+}
+#optionitem>a{
+    color:black;
+    font-weight: 600;
+}
+#optionitem>a:hover{
+    color:rgb(142, 36, 255);
+}
+#optionitem{
+    padding:20px;
+    position: absolute;
+    border-radius: 10px;
+    top:35px;
+    right:10px;
+    width:150px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-weight: 500;
+    background-image: linear-gradient(75deg,#ff69b4,cyan);
+    z-index: 5;
+}
+#optionitem>a.disable{
+  color:white;
+}
+#optionitem>a.disable:hover{
+  color:white;
+}
+.division{
+    color:  rgb(139, 91, 192);
+    font-size: x-large;
+    font-weight: 1000;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+  color:rgb(255, 193, 255);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  text-align: center;
+}
+
+.circle {
+  width: 20vw;
+  height: 20vw;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.btn-small {
+  background-color: #ccc;
+  color: black;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.profile-info {
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mode-section,
+.language-section {
+  width: 100%;
+  margin-top: 30px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Switch Styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin: 0 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: black;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #999;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#logout{
+  margin: 50px;
+}
+
+#logoutbtn{
+  width: 15vw;
+  height: 25px;
+}
+
+
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .btn-small {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .switch {
+    width: 45px;
+    height: 20px;
+  }
+
+  .slider:before {
+    height: 16px;
+    width: 16px;
+  }
+
+  .switch input:checked + .slider:before {
+    transform: translateX(22px);
+  }
+}@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
