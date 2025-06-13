@@ -29,7 +29,6 @@ function animate(button){
     button.style.animationTimingFunction = 'linear';
 }
 
-apiChange('books');
 function apiChange(x){
     if (x == 'video'){
         unselect();
@@ -198,13 +197,24 @@ function books(content){
 }
 
 word=localStorage.getItem('searchword');
+typeword = localStorage.getItem('searchtype');
 if (word!=""){
+    if (typeword == 'books'){
     document.getElementById('search').value = word;
-    search(word);
+    search(word,"books");
     localStorage.setItem('searchword',"");
+    localStorage.setItem('searchtype',"");
+    }
+    if (typeword == 'recipe'){
+        apiChange('books');
+        document.getElementById('search').value = word;
+        search(word,"recipe");
+        localStorage.setItem('searchword',"")
+        localStorage.setItem('searchtype',"");
+    }
 }
-
-async function search(item){
+async function search(item,changeapi){
+    apiChange(changeapi);
     console.log("api in use:",using_api,"search type",api_type,"search word",item);
     try{
         let response = await fetch(using_api+encodeURIComponent(item));
@@ -245,19 +255,14 @@ function handleSearch(){
 
 
 
-
-
-
-
-
 function nav(){
     let word = document.getElementById("wesearch").value
     localStorage.setItem('searchword',word);
+    localStorage.setItem('searchtype','books');
     document.getElementById('wesearch').value='';
     window.location.href='search.html';
     
 }
-
 function show(){
     let menu = document.getElementById('options');
     let icon = document.getElementById('icon');
