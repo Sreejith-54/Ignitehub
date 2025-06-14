@@ -1,6 +1,5 @@
 const bookCards = document.getElementById("bookCards");
 
-// Fetch books from Google Books API
 async function fetchBooks(query = "bestsellers") {
   const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=10`);
   const data = await res.json();

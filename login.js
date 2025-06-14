@@ -8,7 +8,6 @@ const firebaseConfig={
     appId: "1:1043313605645:web:433a9ba27f3f53f2942944"
 }
 
-// Prevent re-initialization if already initialized
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
@@ -19,7 +18,6 @@ const auth = firebase.auth();
 async function login() {
   let email = document.getElementById("email").value;
   let password = document.getElementById('password').value;
-  // Removed username from login, not needed for authentication
 
   try {
     let credential = await auth.signInWithEmailAndPassword(email, password);
@@ -29,7 +27,7 @@ async function login() {
       const userData = doc.data();
       localStorage.setItem('uid', user.uid);
       localStorage.setItem('email', user.email);
-      localStorage.setItem("username", userData.username || ""); // fallback if username exists
+      localStorage.setItem("username", userData.username || "");
     }
     console.log(`email: ${user.email}`);
     window.location.href = "welcome.html";
@@ -53,7 +51,7 @@ async function register() {
         createdAt: new Date()
       });
       console.log('Register success:', userCredential.user);
-      window.location.href = "index.html"; // fixed typo
+      window.location.href = "index.html";
     } catch (error) {
       alert(error.message);
       console.log(error.message);
@@ -69,7 +67,6 @@ function signInWithGoogle() {
   firebase.auth().signInWithPopup(provider)
     .then(async (result) => {
       const user = result.user;
-      // Save user info to Firestore if new
       const userDoc = await db.collection("users").doc(user.uid).get();
       if (!userDoc.exists) {
         await db.collection("users").doc(user.uid).set({
@@ -105,12 +102,10 @@ function submitDetails() {
   closeModal();
 }
 
-// Phone Auth
 let confirmationResult;
 
 function sendOTP() {
   const phoneNumber = document.getElementById('phone').value;
-  // Ensure recaptcha-container exists in your HTML
   if (!window.recaptchaVerifier) {
     window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
       size: 'invisible'
@@ -162,7 +157,6 @@ async function logout() {
   }
 }
 
-// Display user profile info in spans with id=usernamedata and emaildata
 function displayUserProfile() {
   auth.onAuthStateChanged(async function(user) {
     if (user) {
@@ -202,8 +196,6 @@ function displayUserProfile() {
     }
   });
 }
-
-// Automatically call displayUserProfile if the spans exist
 if (document.getElementById('usernamedata') && document.getElementById('emaildata')) {
   displayUserProfile();
 }
